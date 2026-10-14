@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main id="main">
+        <header class="app-header">
+            <span id="contactCount" class="contact-count">(0) contact</span>
+            <button id="addContact" class="btn add-contact">Add Contact</button>
+        </header>
+        <div id="category" class="category">
+            <!-- category will be appended here -->
+        </div>
+    </main>
+    <!-- New Contact Form -->
+    <section id="contactForm" class="contact-form">
+        <form action="/contacts" method="post">
+            <div class="input-group">
+                <input type="text" name="name" id="name" class="input" placeholder="First name (required)">
+                <p class="secondary-text">Contact's first name.</p>
+            </div>
+            <div class="input-group">
+                <input type="text" name="name" id="name" class="input" placeholder="Last name (optional)">
+                <p class="secondary-text">Contact's last name.</p>
+            </div>
+            <div class="input-group">
+                <input type="text" name="tel" id="tel" class="input" placeholder="Phone number">
+                <p class="secondary-text">use <span>'/'</span> to automatically prefix <span>'+237'</span> on save.</p>
+            </div>
+            <div class="input-group">
+                <input type="text" name="note" id="note" class="input" placeholder="Add notes...">
+                <p class="secondary-text">A small note about the contact.</p>
+            </div>
+            <button type="submit" class="btn">Save</button>
+        </form>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>
